@@ -1,10 +1,13 @@
 package modelo;
 
+import java.util.ArrayList;
+
 public class Cliente {
 	private int id;
 	private String nome;
 	private String cidade;
 	private String telefone;
+	private ArrayList<Produto> produtos = new ArrayList<Produto>();
 	
 	public Cliente(String nome, String cidade, String telefone) {
 		this.nome = nome;
@@ -14,6 +17,21 @@ public class Cliente {
 	
 	public Cliente() {}
 	
+	public void adicionarProduto(Produto p) {
+		this.produtos.add(p);
+		p.adicionarCliente(this);
+	}
+	
+	public void removerProduto(Produto p) {
+		this.produtos.remove(p);
+		p.removerCliente(this);
+	}
+	
+	@Override
+	public String toString() {
+		return "Cliente" + nome;
+	}
+
 	public int getId() {
 		return id;
 	}
