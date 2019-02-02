@@ -1,6 +1,6 @@
 package aplicacao;
 
-import Fachada.Fachada;
+import fachada.Fachada;
 import modelo.Cliente;
 import modelo.Produto;
 
