@@ -1,6 +1,5 @@
 package modelo;
 
-import java.util.ArrayList;
 
 public class Produto {
 	private int id;
@@ -8,7 +7,7 @@ public class Produto {
 	private String descricao;
 	private double preco;
 	private int estoque;
-	private ArrayList<Cliente> clientes = new ArrayList<Cliente>();
+	private Pedido pedido;
 	
 	public Produto(String nome, String desc, double preco, int estoque){
 		this.nome = nome;
@@ -19,13 +18,6 @@ public class Produto {
 	
 	public Produto() {}
 	
-	public void adicionarCliente(Cliente c) {
-		this.clientes.add(c);
-	}
-	
-	public void removerCliente(Cliente c) {
-		this.clientes.remove(c);
-	}
 
 	public int getId() {
 		return id;
@@ -65,6 +57,14 @@ public class Produto {
 
 	public void setEstoque(int estoque) {
 		this.estoque = estoque;
+	}
+
+	public Pedido getPedido() {
+		return pedido;
+	}
+
+	public void setPedido(Pedido pedido) {
+		this.pedido = pedido;
 	}
 
 	@Override

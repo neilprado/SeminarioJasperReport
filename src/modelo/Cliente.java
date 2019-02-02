@@ -1,13 +1,22 @@
 package modelo;
 
-import java.util.ArrayList;
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
+@Entity
 public class Cliente {
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
 	private String nome;
 	private String cidade;
 	private String telefone;
-	private ArrayList<Produto> produtos = new ArrayList<Produto>();
+	@OneToOne(cascade=CascadeType.ALL)
+	private Pedido pedido;
 	
 	public Cliente(String nome, String cidade, String telefone) {
 		this.nome = nome;
@@ -16,17 +25,16 @@ public class Cliente {
 	}
 	
 	public Cliente() {}
+
 	
-	public void adicionarProduto(Produto p) {
-		this.produtos.add(p);
-		p.adicionarCliente(this);
+	public Pedido getPedido() {
+		return pedido;
 	}
-	
-	public void removerProduto(Produto p) {
-		this.produtos.remove(p);
-		p.removerCliente(this);
+
+	public void setPedido(Pedido p) {
+		this.pedido = p;
 	}
-	
+
 	@Override
 	public String toString() {
 		return "Cliente" + nome;
