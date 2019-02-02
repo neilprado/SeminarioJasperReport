@@ -1,5 +1,6 @@
 package modelo;
 
+import javax.persistence.ManyToOne;
 
 public class Produto {
 	private int id;
@@ -7,6 +8,7 @@ public class Produto {
 	private String descricao;
 	private double preco;
 	private int estoque;
+	@ManyToOne
 	private Pedido pedido;
 	
 	public Produto(String nome, String desc, double preco, int estoque){
