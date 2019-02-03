@@ -5,7 +5,7 @@ Repositório do seminário da Disciplina de Persistência de Objetos ministrada pel
 
 Para a geração deste relatório, foi utilizada a mesma temática do [projeto](https://github.com/neilprado/MusicStore-Java) da disciplina, uma loja de músicas digitais, porém com o escopo reduzido a três classes conforme mostra a figura abaixo:
 
-INSERIR FIGURA AQUI
+![Diagrama de Classes](https://github.com/neilprado/SeminarioJasperReport/blob/master/DiagramaClasses.jpg)
 
 **Pré Requisitos**
 
