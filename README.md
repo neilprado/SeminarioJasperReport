@@ -10,7 +10,9 @@ Para a geração deste relatório, foi utilizada a mesma temática do [projeto](http
 **Pré Requisitos**
 
 *Eclipse*
+
 *JasperSoft Studio*
+
 *PostgreSQL*
 
 **E agora o que eu faço?**
