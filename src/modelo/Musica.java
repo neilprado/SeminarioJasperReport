@@ -21,6 +21,8 @@ public class Musica {
 		this.album = al;
 		this.duracao = duracao;
 	}
+	
+	public Musica() {}
 
 	public int getId() {
 		return id;
@@ -56,6 +58,6 @@ public class Musica {
 
 	@Override
 	public String toString() {
-		return "Musica [id=" + id + ", nome=" + nome + ", album=" + album + ", duracao=" + duracao + "]";
+		return this.getNome() + "\n";
 	}
 }

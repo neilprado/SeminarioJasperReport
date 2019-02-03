@@ -25,9 +25,17 @@ public class Artista {
 		this.nacionalidade = nac;
 	}
 	
+	public Artista() {}
+	
 	public void adicionar(Album a) {
 		albuns.add(a);
+		a.setArtista(this);
 		
+	}
+	
+	public void remover(Album a) {
+		this.albuns.remove(a);
+		a.setArtista(null);
 	}
 
 	public int getId() {
@@ -64,6 +72,6 @@ public class Artista {
 
 	@Override
 	public String toString() {
-		return "Artista [id=" + id + ", nome=" + nome + ", nacionalidade=" + nacionalidade + ", albuns=" + albuns + "]";
+		return this.getNome() + "\n";
 	}
 }

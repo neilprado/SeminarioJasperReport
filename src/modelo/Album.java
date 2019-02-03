@@ -26,6 +26,18 @@ public class Album {
 		this.nome = nome;
 		this.artista = a;
 	}
+	
+	public Album() {}
+	
+	public void adicionar(Musica m) {
+		this.musicas.add(m);
+		m.setAlbum(this);
+	}
+	
+	public void remover(Musica m) {
+		this.musicas.remove(m);
+		m.setAlbum(null);
+	}
 
 	public int getId() {
 		return id;
@@ -61,7 +73,7 @@ public class Album {
 
 	@Override
 	public String toString() {
-		return "Album [id=" + id + ", artista=" + artista + ", nome=" + nome + ", musicas=" + musicas + "]";
+		return this.getNome() + "\n";
 	}
 }
 
