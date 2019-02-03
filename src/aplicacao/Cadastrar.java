@@ -14,7 +14,7 @@ public class Cadastrar {
 		Musica m;	
 		try {
 			System.out.println("Cadastrando...");
-			a = Fachada.cadastrarArtista("Neil Yound", "EUA");
+			a = Fachada.cadastrarArtista("Neil Young", "EUA");
 			al = Fachada.cadastrarAlbum("Harvest", a);
 			m = Fachada.cadastrarMusica("Heart of Gold", al, 191);
 			a = Fachada.cadastrarArtista("A-Ha", "Noruega");
